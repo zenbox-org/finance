@@ -3,9 +3,9 @@ import { Tasset } from '../Tasset'
 import { ensure } from 'zenbox-util/ensure'
 import { isEqual } from 'lodash-es'
 import { sumBigNumbers } from 'zenbox-util/bignumber'
-import { TimeValueMap } from '../../../../models/Config'
 import { toAmount } from './toAmount'
 import { toTime } from './toTime'
+import { TimeValueMap } from '../../../generic/models/TimeValueMap'
 
 export function sumBags(bags: Bag[], asset: Tasset, timeValueMap: TimeValueMap) {
   return bag(

@@ -2,13 +2,13 @@ import { z } from 'zod'
 import { WalletSchema } from './Wallet'
 import { AmountSchema } from './Amount'
 import { Tasset, TassetSchema } from './Tasset'
-import { TimeValueMap } from '../../../models/Config'
 import { getDuplicatesRefinement } from 'zenbox-util/zod'
 import { toUidFromSchema } from 'zenbox-util/uid'
 import { NotesSchema } from '../../generic/models/Notes'
 import { IdSchema } from '../../generic/models/Id'
 import { isEqualByNetworkUid } from './Network'
 import { sumBags } from './Bag/sumBags'
+import { TimeValueMap } from '../../generic/models/TimeValueMap'
 
 export const TransferSchema = z.object({
   id: IdSchema,

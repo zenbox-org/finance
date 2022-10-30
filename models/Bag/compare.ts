@@ -1,7 +1,7 @@
-import { TimeValueMap } from '../../../../models/Config'
 import { toAmount } from './toAmount'
 import { Bag } from '../Bag'
 import { uniq } from 'lodash-es'
+import { TimeValueMap } from '../../../generic/models/TimeValueMap'
 
 export function isLessThanBag(a: Bag, b: Bag, timeValueMap: TimeValueMap) {
   const $aPrice = a.amount

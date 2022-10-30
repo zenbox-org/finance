@@ -1,8 +1,6 @@
 import { z } from 'zod'
 import { AmountSchema } from './Amount'
 import { Tasset, TassetSchema, TassetUidSchema } from './Tasset'
-import { Config } from '../../../models/Config'
-import { toTime } from './Bag/toTime'
 import { getDuplicatesRefinement } from 'zenbox-util/zod'
 import { USD } from '../data/allTassets'
 import { BigNumber } from 'zenbox-util/bignumber'
@@ -34,10 +32,6 @@ export function parseBags(bags: Bag[]): Bag[] {
 
 export function parseBagUid(bagUid: BagUid): BagUid {
   return BagUidSchema.parse(bagUid)
-}
-
-export function getConverterToTime(project: Config) {
-  return (bag: Bag) => toTime(bag, project.timeValueMap).toString()
 }
 
 export function bag(amount: BigNumber | number | string, asset: Tasset): Bag {

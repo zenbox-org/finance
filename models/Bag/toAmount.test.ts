@@ -3,8 +3,8 @@ import { test } from '@jest/globals'
 import { toAmount } from './toAmount'
 import { BigNumber } from 'zenbox-util/bignumber'
 import { ETH, USDT } from '../../data/allTassets'
-import { TimeValueMap } from '../../../../models/Config'
 import { hour } from 'zenbox-util/duration'
+import { TimeValueMap } from '../../../generic/models/TimeValueMap'
 
 test('toAmount', async function () {
   const timeValueMap: TimeValueMap = {

@@ -1,6 +1,6 @@
 import { Tasset } from '../Tasset'
 import { Amount } from '../Amount'
-import { TimeValueMap } from '../../../../models/Config'
+import { TimeValueMap } from '../../../generic/models/TimeValueMap'
 
 export function toAmount(amount: Amount, from: Tasset, to: Tasset, timeValueMap: TimeValueMap) {
   if (from.ticker === to.ticker) return amount
