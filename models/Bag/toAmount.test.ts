@@ -1,10 +1,10 @@
-import { expect } from 'zenbox-util/chai'
 import { test } from '@jest/globals'
-import { toAmount } from './toAmount'
 import { BigNumber } from 'zenbox-util/bignumber'
-import { ETH, USDT } from '../../data/allTassets'
+import { expect } from 'zenbox-util/chai'
 import { hour } from 'zenbox-util/duration'
 import { TimeValueMap } from '../../../generic/models/TimeValueMap'
+import { ETH, USDT } from '../../data/allTassets'
+import { toAmount } from './toAmount'
 
 test('toAmount', async function () {
   const timeValueMap: TimeValueMap = {
