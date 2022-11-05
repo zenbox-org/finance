@@ -1,6 +1,6 @@
-import { parseTassetUid, Tasset, TassetSchema } from '../models/Tasset'
 import { getFinder, getInserter, getName } from 'zenbox-util/zod'
 import { withIdFromName } from '../../generic/models/Name/withIdFromName'
+import { parseTassetUid, Tasset, TassetSchema } from '../models/Tasset'
 
 export const allTassets: Tasset[] = []
 
@@ -143,4 +143,9 @@ export const AKS = addTasset(withIdFromName({
 export const SOL = addTasset(withIdFromName({
   name: 'Solana',
   ticker: 'SOL',
+}))
+
+export const HEX = addTasset(withIdFromName({
+  name: 'Hex',
+  ticker: 'HEX',
 }))
