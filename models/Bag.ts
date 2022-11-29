@@ -1,9 +1,9 @@
+import { BigNumber } from 'zenbox-util/bignumber'
+import { getDuplicatesRefinement } from 'zenbox-util/zod'
 import { z } from 'zod'
+import { USD } from '../data/allTassets'
 import { AmountSchema } from './Amount'
 import { Tasset, TassetSchema, TassetUidSchema } from './Tasset'
-import { getDuplicatesRefinement } from 'zenbox-util/zod'
-import { USD } from '../data/allTassets'
-import { BigNumber } from 'zenbox-util/bignumber'
 
 export const BagSchema = z.object({
   amount: AmountSchema,
@@ -41,7 +41,7 @@ export function bag(amount: BigNumber | number | string, asset: Tasset): Bag {
   }
 }
 
-export function bagToString(bag: Bag) {
+export function renderBag(bag: Bag) {
   return `${bag.amount.toString()} ${bag.asset.ticker}`
 }
 
