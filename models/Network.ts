@@ -1,7 +1,7 @@
 import { z } from 'zod'
 import { getDuplicatesRefinement } from 'zenbox-util/zod'
 import { IdSchema } from '../../generic/models/Id'
-import { isEqualBy } from 'zenbox-util/lodash'
+import { isEqualByD } from 'zenbox-util/lodash'
 
 export const NetworkSchema = z.object({
   id: IdSchema,
@@ -31,5 +31,5 @@ export function parseNetworkUid(networkUid: NetworkUid): NetworkUid {
 }
 
 export function isEqualByNetworkUid(a: Network, b: Network) {
-  return isEqualBy(a, b, parseNetworkUid)
+  return isEqualByD(a, b, parseNetworkUid)
 }
