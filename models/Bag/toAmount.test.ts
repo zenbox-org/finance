@@ -1,8 +1,8 @@
 import { test } from '@jest/globals'
 import { TimeValueMap } from 'libs/generic/models/TimeValueMap'
-import { BigNumber } from 'zenbox-util/bignumber'
-import { expect } from 'zenbox-util/chai'
-import { hour } from 'zenbox-util/duration'
+import { BigNumber } from 'libs/utils/bignumber'
+import { expect } from 'libs/utils/chai'
+import { hour } from 'libs/utils/duration'
 import { ETH, USDT } from '../../data/allTassets'
 import { toAmount } from './toAmount'
 

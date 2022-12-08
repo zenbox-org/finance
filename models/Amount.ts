@@ -1,6 +1,6 @@
 import { z } from 'zod'
-import { BigNumber } from 'zenbox-util/bignumber'
-import { refinePositiveBigNumber, refinePositiveBigNumberParams, refinePositiveOrZeroBigNumber, refinePositiveOrZeroBigNumberParams } from 'zenbox-util/zod.bignumber'
+import { BigNumber } from 'libs/utils/bignumber'
+import { refinePositiveBigNumber, refinePositiveBigNumberParams, refinePositiveOrZeroBigNumber, refinePositiveOrZeroBigNumberParams } from 'libs/utils/zod.bignumber'
 
 export const AmountSchema = z.instanceof(BigNumber)
   .refine(refinePositiveOrZeroBigNumber, refinePositiveOrZeroBigNumberParams)

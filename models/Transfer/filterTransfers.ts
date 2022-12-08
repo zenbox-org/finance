@@ -1,5 +1,5 @@
 import { Person } from '../../../generic/models/Person'
-import { impl } from 'zenbox-util/todo'
+import { impl } from 'libs/utils/todo'
 import { Transfer } from '../Transfer'
 
 export function filterIncomingTransfers<T extends Transfer, P extends Person>(transfers: T[], employees: P[]) {

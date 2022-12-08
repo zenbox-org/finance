@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { BigNumber } from 'zenbox-util/bignumber'
+import { BigNumber } from 'libs/utils/bignumber'
 
 export const PriceSchema = z.instanceof(BigNumber)
   .refine(value => !value /* check for undefined */ || value.isGreaterThanOrEqualTo(0), {

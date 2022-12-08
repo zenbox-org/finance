@@ -1,5 +1,5 @@
 import { Bag } from '../Bag'
-import { ensure } from 'zenbox-util/ensure'
+import { ensure } from 'libs/utils/ensure'
 import { TimeValueMap } from '../../../generic/models/TimeValueMap'
 
 /**

@@ -1,7 +1,7 @@
 import { z } from 'zod'
-import { getDuplicatesRefinement } from 'zenbox-util/zod'
+import { getDuplicatesRefinement } from 'libs/utils/zod'
 import { IdSchema } from '../../generic/models/Id'
-import { isEqualByD } from 'zenbox-util/lodash'
+import { isEqualByD } from 'libs/utils/lodash'
 
 export const NetworkSchema = z.object({
   id: IdSchema,

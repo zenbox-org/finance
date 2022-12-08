@@ -1,6 +1,6 @@
 import { AmountSchema } from './Amount'
-import { BigNumber } from 'zenbox-util/bignumber'
-import { testSamples } from 'zenbox-util/jest/testSamples'
+import { BigNumber } from 'libs/utils/bignumber'
+import { testSamples } from 'libs/utils/jest/testSamples'
 
 testSamples(AmountSchema, [
   new BigNumber('0'),

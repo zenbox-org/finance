@@ -1,4 +1,4 @@
-import { getFinder, getInserter, getName } from 'zenbox-util/zod'
+import { getFinder, getInserter, getName } from 'libs/utils/zod'
 import { withIdFromName } from '../../generic/models/Name/withIdFromName'
 import { parseTassetUid, Tasset, TassetSchema } from '../models/Tasset'
 

@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { getDuplicatesRefinement } from 'zenbox-util/zod'
+import { getDuplicatesRefinement } from 'libs/utils/zod'
 import { TickerSchema } from './Ticker'
 import { IdSchema } from '../../generic/models/Id'
 import { NameSchema } from '../../generic/models/Name'

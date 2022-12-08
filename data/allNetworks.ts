@@ -1,5 +1,5 @@
 import { Network, NetworkSchema, parseNetworkUid } from '../models/Network'
-import { getFinder, getInserter } from 'zenbox-util/zod'
+import { getFinder, getInserter } from 'libs/utils/zod'
 
 export const allNetworks: Network[] = []
 

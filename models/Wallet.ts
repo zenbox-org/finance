@@ -1,5 +1,5 @@
 import { z, ZodObject } from 'zod'
-import { getDuplicatesRefinement } from 'zenbox-util/zod'
+import { getDuplicatesRefinement } from 'libs/utils/zod'
 import { ZodRawShape } from 'zod/lib/types'
 import { strict as assert } from 'assert'
 import { NetworkSchema, NetworkUidSchema } from './Network'

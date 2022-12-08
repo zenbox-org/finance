@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { ensure } from 'zenbox-util/ensure'
+import { ensure } from 'libs/utils/ensure'
 
 export const TickerRegex = /^[a-zA-Z0-9]+$/
 

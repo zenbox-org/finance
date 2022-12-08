@@ -2,7 +2,7 @@ import { parsePricePointUid, PricePoint } from '../PricePoint'
 import { Tasset } from '../Tasset'
 import { Amount } from '../Amount'
 import { Url } from '../../../generic/models/Url'
-import { byUid } from 'zenbox-util/uid'
+import { byUid } from 'libs/utils/uid'
 
 export function convertAmount(points: PricePoint[], source: Url, date: Date, from: Tasset, to: Tasset, amount: Amount) {
   const pointFromTo = points.find(byUid(parsePricePointUid, {
