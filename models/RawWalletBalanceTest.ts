@@ -3,7 +3,7 @@ import { getDuplicatesRefinement } from 'libs/utils/zod'
 import { WalletBalanceTestSchema } from './WalletBalanceTest'
 import { WalletSchema } from './Wallet'
 import { NetworkSchema } from './Network'
-import { TassetSchema } from './Tasset'
+import { AssetSchema } from './Asset'
 
 export const RawWalletBalanceTestSchema = WalletBalanceTestSchema.omit({
   walletUid: true,
@@ -11,7 +11,7 @@ export const RawWalletBalanceTestSchema = WalletBalanceTestSchema.omit({
 }).extend({
   networkId: NetworkSchema.shape.id,
   walletName: WalletSchema.shape.name,
-  assetTicker: TassetSchema.shape.ticker,
+  assetTicker: AssetSchema.shape.ticker,
 })
 
 export const RawWalletBalanceTestsSchema = z.array(RawWalletBalanceTestSchema)

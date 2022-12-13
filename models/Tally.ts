@@ -2,12 +2,12 @@ import { z } from 'zod'
 import { toUidFromSchema } from 'libs/utils/uid'
 import { getDuplicatesRefinement } from 'libs/utils/zod'
 import { WalletSchema, WalletUidSchema } from './Wallet'
-import { TassetUidSchema, TassetSchema } from './Tasset'
+import { AssetUidSchema, AssetSchema } from './Asset'
 import { TotalSchema } from './Total'
 
 export const TallySchema = z.object({
   wallet: WalletSchema,
-  asset: TassetSchema,
+  asset: AssetSchema,
   total: TotalSchema,
 })
 
@@ -16,7 +16,7 @@ export const TallysSchema = z.array(TallySchema)
 
 export const TallyUidSchema = z.object({
   wallet: WalletUidSchema,
-  asset: TassetUidSchema,
+  asset: AssetUidSchema,
 })
 
 export type Tally = z.infer<typeof TallySchema>

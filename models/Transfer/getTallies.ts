@@ -1,7 +1,7 @@
 import { Transfer } from '../Transfer'
 import { TransferTally, TransferTallyKey } from '../TallyMap'
 import { parseWalletUid } from '../Wallet'
-import { parseTassetUid } from '../Tasset'
+import { parseAssetUid } from '../Asset'
 import { addTallyBigNumber } from '../../../generic/models/Tally/addTally'
 
 export function getTallies(transfers: Transfer[]) {
@@ -13,13 +13,13 @@ export function getTallies(transfers: Transfer[]) {
 }
 
 function addTallyFrom(transfer: Transfer, tallies: TransferTally[]) {
-  const key: TransferTallyKey = { walletUid: parseWalletUid(transfer.from), assetUid: parseTassetUid(transfer.asset) }
+  const key: TransferTallyKey = { walletUid: parseWalletUid(transfer.from), assetUid: parseAssetUid(transfer.asset) }
   const value = transfer.amount.negated()
   return addTallyBigNumber(tallies, key, value)
 }
 
 function addTallyTo(transfer: Transfer, tallies: TransferTally[]) {
-  const key: TransferTallyKey = { walletUid: parseWalletUid(transfer.to), assetUid: parseTassetUid(transfer.asset) }
+  const key: TransferTallyKey = { walletUid: parseWalletUid(transfer.to), assetUid: parseAssetUid(transfer.asset) }
   const value = transfer.amount
   return addTallyBigNumber(tallies, key, value)
 }

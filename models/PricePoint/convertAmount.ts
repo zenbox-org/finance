@@ -1,10 +1,10 @@
 import { parsePricePointUid, PricePoint } from '../PricePoint'
-import { Tasset } from '../Tasset'
+import { Asset } from '../Asset'
 import { Amount } from '../Amount'
 import { Url } from '../../../generic/models/Url'
 import { byUid } from 'libs/utils/uid'
 
-export function convertAmount(points: PricePoint[], source: Url, date: Date, from: Tasset, to: Tasset, amount: Amount) {
+export function convertAmount(points: PricePoint[], source: Url, date: Date, from: Asset, to: Asset, amount: Amount) {
   const pointFromTo = points.find(byUid(parsePricePointUid, {
     base: from,
     quote: to,
@@ -27,7 +27,7 @@ export function convertAmount(points: PricePoint[], source: Url, date: Date, fro
 }
 
 class PricePointNotFoundError extends Error {
-  constructor(public readonly source: Url, public readonly date: Date, public readonly from: Tasset, public readonly to: Tasset) {
+  constructor(public readonly source: Url, public readonly date: Date, public readonly from: Asset, public readonly to: Asset) {
     super(`No price point found for ${from.id} - ${to.id} pair from ${source} at ${date.toISOString()}`)
   }
 }

@@ -3,7 +3,7 @@ import { TimeValueMap } from 'libs/generic/models/TimeValueMap'
 import { BigNumber } from 'libs/utils/bignumber'
 import { expect } from 'libs/utils/chai'
 import { hour } from 'libs/utils/duration'
-import { ETH, USDT } from '../../data/allTassets'
+import { ETH, USDT } from '../../data/allAssets'
 import { toAmount } from './toAmount'
 
 test('toAmount', async function () {

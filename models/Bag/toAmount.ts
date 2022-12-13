@@ -1,8 +1,8 @@
-import { Tasset } from '../Tasset'
+import { Asset } from '../Asset'
 import { Amount } from '../Amount'
 import { TimeValueMap } from '../../../generic/models/TimeValueMap'
 
-export function toAmount(amount: Amount, from: Tasset, to: Tasset, timeValueMap: TimeValueMap) {
+export function toAmount(amount: Amount, from: Asset, to: Asset, timeValueMap: TimeValueMap) {
   if (from.ticker === to.ticker) return amount
   const valueFrom = timeValueMap[from.ticker]
   const valueTo = timeValueMap[to.ticker]

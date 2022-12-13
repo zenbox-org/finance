@@ -1,7 +1,7 @@
 import { z } from 'zod'
 import { WalletSchema } from './Wallet'
 import { AmountSchema } from './Amount'
-import { Tasset, TassetSchema } from './Tasset'
+import { Asset, AssetSchema } from './Asset'
 import { getDuplicatesRefinement } from 'libs/utils/zod'
 import { toUidFromSchema } from 'libs/utils/uid'
 import { NotesSchema } from '../../generic/models/Notes'
@@ -13,7 +13,7 @@ import { TimeValueMap } from '../../generic/models/TimeValueMap'
 export const TransferSchema = z.object({
   id: IdSchema,
   amount: AmountSchema,
-  asset: TassetSchema,
+  asset: AssetSchema,
   from: WalletSchema,
   to: WalletSchema,
   date: z.date(),
@@ -49,6 +49,6 @@ export function getTransferUid(transferUid: TransferUid) {
   return toUidFromSchema(transferUid, TransferUidSchema)
 }
 
-export function sumTransfers(transfers: Transfer[], asset: Tasset, timeValueMap: TimeValueMap) {
+export function sumTransfers(transfers: Transfer[], asset: Asset, timeValueMap: TimeValueMap) {
   return sumBags(transfers, asset, timeValueMap)
 }

@@ -1,12 +1,12 @@
 import { z } from 'zod'
 import { getDuplicatesRefinement } from 'libs/utils/zod'
 import { WalletUidSchema } from './Wallet'
-import { TassetUidSchema } from './Tasset'
+import { AssetUidSchema } from './Asset'
 import { AmountSchema } from './Amount'
 
 export const WalletBalanceTestSchema = z.object({
   walletUid: WalletUidSchema,
-  assetUid: TassetUidSchema,
+  assetUid: AssetUidSchema,
   amountMin: AmountSchema,
   amountMax: AmountSchema,
 })

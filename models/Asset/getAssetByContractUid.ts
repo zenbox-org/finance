@@ -1,4 +1,4 @@
-import { Tasset } from '../Tasset'
+import { Asset } from '../Asset'
 import { ContractUid } from '../../../ethereum/models/Contract'
 
-export type GetAssetByContractUid = (uid: ContractUid) => Tasset
+export type GetAssetByContractUid = (uid: ContractUid) => Asset

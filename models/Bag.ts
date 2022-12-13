@@ -1,21 +1,22 @@
 import { BigNumber } from 'libs/utils/bignumber'
-import { getDuplicatesRefinement } from 'libs/utils/zod'
+import { getArraySchema } from 'libs/utils/zod'
 import { z } from 'zod'
-import { USD } from '../data/allTassets'
+import { USD } from '../data/allAssets'
 import { AmountSchema } from './Amount'
-import { Tasset, TassetSchema, TassetUidSchema } from './Tasset'
+import { parseAssetUid, Asset, AssetSchema, AssetUidSchema } from './Asset'
 
 export const BagSchema = z.object({
   amount: AmountSchema,
-  asset: TassetSchema,
+  asset: AssetSchema,
 }).describe('Bag')
 
-export const BagsSchema = z.array(BagSchema)
-  .superRefine(getDuplicatesRefinement('Bag', parseBagUid))
+export const BagsSchema = getArraySchema(BagSchema, parseBagUid)
+
+export const BagsByAssetSchema = getArraySchema(BagSchema, b => parseAssetUid(b.asset))
 
 export const BagUidSchema = z.object({
   amount: BagSchema.shape.amount,
-  asset: TassetUidSchema,
+  asset: AssetUidSchema,
 })
 
 export type Bag = z.infer<typeof BagSchema>
@@ -34,7 +35,7 @@ export function parseBagUid(bagUid: BagUid): BagUid {
   return BagUidSchema.parse(bagUid)
 }
 
-export function bag(amount: BigNumber | number | string, asset: Tasset): Bag {
+export function bag(amount: BigNumber | number | string, asset: Asset): Bag {
   return {
     amount: new BigNumber(amount),
     asset,
