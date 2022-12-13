@@ -1,6 +1,6 @@
+import { getTransactionUrl } from '../../../blockchain/models/BlockchainExplorer/getTransactionUrl'
 import { Transfer } from '../Transfer'
 import { fromTransferToBlockchainExplorer } from './fromTransferToBlockchainExplorer'
-import { getTransactionUrl } from '../../../blockchain/models/BlockchainExplorer/getTransactionUrl'
 
 export function fromTransferToTransactionUrl(transfer: Transfer) {
   const explorer = fromTransferToBlockchainExplorer(transfer)

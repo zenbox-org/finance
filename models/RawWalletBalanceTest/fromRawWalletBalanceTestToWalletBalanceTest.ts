@@ -1,10 +1,10 @@
-import { Network } from '../Network'
-import { RawWalletBalanceTest } from '../RawWalletBalanceTest'
-import { parseWalletUid } from '../Wallet'
 import { getById } from '../../../generic/models/Id'
 import { Asset, parseAssetUid } from '../Asset'
-import { parseWalletBalanceTest } from '../WalletBalanceTest'
+import { Network } from '../Network'
+import { RawWalletBalanceTest } from '../RawWalletBalanceTest'
 import { getByTicker } from '../Ticker'
+import { parseWalletUid } from '../Wallet'
+import { parseWalletBalanceTest } from '../WalletBalanceTest'
 
 export const fromRawWalletBalanceTestToWalletBalanceTest = (networks: Network[]) => (assets: Asset[]) => ($test: RawWalletBalanceTest) => {
   const { networkId, walletName, assetTicker } = $test

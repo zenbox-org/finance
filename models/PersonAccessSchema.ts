@@ -1,6 +1,6 @@
 import { z } from 'zod'
-import { PersonSchema } from '../../generic/models/Person'
 import { AccessTypeSchema } from '../../generic/models/AccessType'
+import { PersonSchema } from '../../generic/models/Person'
 
 export const PersonAccessSchema = z.object({
   person: PersonSchema,

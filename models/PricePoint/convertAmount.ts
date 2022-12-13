@@ -1,8 +1,8 @@
-import { parsePricePointUid, PricePoint } from '../PricePoint'
-import { Asset } from '../Asset'
-import { Amount } from '../Amount'
-import { Url } from '../../../generic/models/Url'
 import { byUid } from 'libs/utils/uid'
+import { Url } from '../../../generic/models/Url'
+import { Amount } from '../Amount'
+import { Asset } from '../Asset'
+import { parsePricePointUid, PricePoint } from '../PricePoint'
 
 export function convertAmount(points: PricePoint[], source: Url, date: Date, from: Asset, to: Asset, amount: Amount) {
   const pointFromTo = points.find(byUid(parsePricePointUid, {

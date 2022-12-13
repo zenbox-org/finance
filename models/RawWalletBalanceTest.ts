@@ -1,9 +1,9 @@
-import { z } from 'zod'
 import { getDuplicatesRefinement } from 'libs/utils/zod'
-import { WalletBalanceTestSchema } from './WalletBalanceTest'
-import { WalletSchema } from './Wallet'
-import { NetworkSchema } from './Network'
+import { z } from 'zod'
 import { AssetSchema } from './Asset'
+import { NetworkSchema } from './Network'
+import { WalletSchema } from './Wallet'
+import { WalletBalanceTestSchema } from './WalletBalanceTest'
 
 export const RawWalletBalanceTestSchema = WalletBalanceTestSchema.omit({
   walletUid: true,

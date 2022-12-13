@@ -1,6 +1,6 @@
-import { AmountSchema } from './Amount'
 import { BigNumber } from 'libs/utils/bignumber'
 import { testSamples } from 'libs/utils/jest/testSamples'
+import { AmountSchema } from './Amount'
 
 testSamples(AmountSchema, [
   new BigNumber('0'),

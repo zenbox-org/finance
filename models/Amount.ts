@@ -1,6 +1,6 @@
-import { z } from 'zod'
 import { BigNumber } from 'libs/utils/bignumber'
 import { refinePositiveBigNumber, refinePositiveBigNumberParams, refinePositiveOrZeroBigNumber, refinePositiveOrZeroBigNumberParams } from 'libs/utils/zod.bignumber'
+import { z } from 'zod'
 
 export const AmountSchema = z.instanceof(BigNumber)
   .refine(refinePositiveOrZeroBigNumber, refinePositiveOrZeroBigNumberParams)

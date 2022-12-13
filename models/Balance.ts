@@ -1,7 +1,7 @@
 import { z } from 'zod'
 import { AmountSchema } from './Amount'
-import { WalletSchema } from './Wallet'
 import { AssetSchema } from './Asset'
+import { WalletSchema } from './Wallet'
 
 export const BalanceSchema = z.object({
   wallet: WalletSchema,

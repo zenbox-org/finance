@@ -1,5 +1,5 @@
-import { z } from 'zod'
 import { BigNumber } from 'libs/utils/bignumber'
+import { z } from 'zod'
 
 export const TotalSchema = z.instanceof(BigNumber)
 

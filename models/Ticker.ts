@@ -1,5 +1,5 @@
-import { z } from 'zod'
 import { ensure } from 'libs/utils/ensure'
+import { z } from 'zod'
 
 export const TickerRegex = /^[a-zA-Z0-9]+$/
 

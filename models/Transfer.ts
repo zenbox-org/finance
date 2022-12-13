@@ -1,14 +1,13 @@
+import { getDuplicatesRefinement } from 'libs/utils/zod'
 import { z } from 'zod'
-import { WalletSchema } from './Wallet'
+import { IdSchema } from '../../generic/models/Id'
+import { NotesSchema } from '../../generic/models/Notes'
+import { TimeValueMap } from '../../generic/models/TimeValueMap'
 import { AmountSchema } from './Amount'
 import { Asset, AssetSchema } from './Asset'
-import { getDuplicatesRefinement } from 'libs/utils/zod'
-import { toUidFromSchema } from 'libs/utils/uid'
-import { NotesSchema } from '../../generic/models/Notes'
-import { IdSchema } from '../../generic/models/Id'
-import { isEqualByNetworkUid } from './Network'
 import { sumBags } from './Bag/sumBags'
-import { TimeValueMap } from '../../generic/models/TimeValueMap'
+import { isEqualByNetworkUid } from './Network'
+import { WalletSchema } from './Wallet'
 
 export const TransferSchema = z.object({
   id: IdSchema,
@@ -46,7 +45,7 @@ export function validateTransfers(transfers: Transfer[]): Transfer[] {
 }
 
 export function getTransferUid(transferUid: TransferUid) {
-  return toUidFromSchema(transferUid, TransferUidSchema)
+  return TransferUidSchema.parse(transferUid)
 }
 
 export function sumTransfers(transfers: Transfer[], asset: Asset, timeValueMap: TimeValueMap) {

@@ -1,6 +1,6 @@
-import { Bag } from '../Bag'
 import { ensure } from 'libs/utils/ensure'
 import { TimeValueMap } from '../../../generic/models/TimeValueMap'
+import { Bag } from '../Bag'
 
 /**
  * Value is subjective, so we convert all assets to time

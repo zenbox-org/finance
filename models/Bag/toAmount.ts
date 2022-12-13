@@ -1,6 +1,6 @@
-import { Asset } from '../Asset'
-import { Amount } from '../Amount'
 import { TimeValueMap } from '../../../generic/models/TimeValueMap'
+import { Amount } from '../Amount'
+import { Asset } from '../Asset'
 
 export function toAmount(amount: Amount, from: Asset, to: Asset, timeValueMap: TimeValueMap) {
   if (from.ticker === to.ticker) return amount

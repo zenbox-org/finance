@@ -1,9 +1,9 @@
-import { z, ZodObject } from 'zod'
-import { getDuplicatesRefinement } from 'libs/utils/zod'
-import { ZodRawShape } from 'zod/lib/types'
 import { strict as assert } from 'assert'
-import { NetworkSchema, NetworkUidSchema } from './Network'
+import { getDuplicatesRefinement } from 'libs/utils/zod'
+import { z, ZodObject } from 'zod'
+import { ZodRawShape } from 'zod/lib/types'
 import { NameSchema } from '../../generic/models/Name'
+import { NetworkSchema, NetworkUidSchema } from './Network'
 
 export const WalletSchema = validateWalletSchema(z.object({
   name: NameSchema,

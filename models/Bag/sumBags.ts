@@ -1,11 +1,11 @@
-import { bag, Bag } from '../Bag'
-import { Asset } from '../Asset'
+import { sumBigNumbers } from 'libs/utils/bignumber'
 import { ensure } from 'libs/utils/ensure'
 import { isEqual } from 'lodash-es'
-import { sumBigNumbers } from 'libs/utils/bignumber'
+import { TimeValueMap } from '../../../generic/models/TimeValueMap'
+import { Asset } from '../Asset'
+import { bag, Bag } from '../Bag'
 import { toAmount } from './toAmount'
 import { toTime } from './toTime'
-import { TimeValueMap } from '../../../generic/models/TimeValueMap'
 
 export function sumBags(bags: Bag[], asset: Asset, timeValueMap: TimeValueMap) {
   return bag(

@@ -1,7 +1,7 @@
-import { WalletUid } from './Wallet'
-import { AssetUid } from './Asset'
 import { Tally } from '../../generic/models/Tally'
+import { AssetUid } from './Asset'
 import { Total } from './Total'
+import { WalletUid } from './Wallet'
 
 export type TransferTallyKey = { walletUid: WalletUid, assetUid: AssetUid }
 

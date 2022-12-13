@@ -1,9 +1,9 @@
-import { z } from 'zod'
 import { getDuplicatesRefinement } from 'libs/utils/zod'
-import { PriceSchema } from './Price'
-import { AssetUidSchema, AssetSchema } from './Asset'
-import { UrlSchema } from '../../generic/models/Url'
 import { isEqual } from 'lodash-es'
+import { z } from 'zod'
+import { UrlSchema } from '../../generic/models/Url'
+import { AssetSchema, AssetUidSchema } from './Asset'
+import { PriceSchema } from './Price'
 
 export const PricePointSchema = z.object({
   base: AssetSchema,

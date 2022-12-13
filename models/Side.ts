@@ -1,6 +1,6 @@
-import { z } from 'zod'
 import { getArraySchema } from 'libs/utils/zod'
 import { identity } from 'lodash-es'
+import { z } from 'zod'
 
 export const SideSchema = z.enum(['Buy', 'Sell']).describe('Side')
 

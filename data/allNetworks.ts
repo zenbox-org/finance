@@ -1,5 +1,5 @@
-import { Network, NetworkSchema, parseNetworkUid } from '../models/Network'
 import { getFinder, getInserter } from 'libs/utils/zod'
+import { Network, NetworkSchema, parseNetworkUid } from '../models/Network'
 
 export const allNetworks: Network[] = []
 

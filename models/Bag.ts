@@ -3,7 +3,7 @@ import { getArraySchema } from 'libs/utils/zod'
 import { z } from 'zod'
 import { USD } from '../data/allAssets'
 import { AmountSchema } from './Amount'
-import { parseAssetUid, Asset, AssetSchema, AssetUidSchema } from './Asset'
+import { Asset, AssetSchema, AssetUidSchema, parseAssetUid } from './Asset'
 
 export const BagSchema = z.object({
   amount: AmountSchema,

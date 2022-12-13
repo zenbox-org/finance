@@ -1,9 +1,8 @@
-import { z } from 'zod'
-import { toUidFromSchema } from 'libs/utils/uid'
 import { getDuplicatesRefinement } from 'libs/utils/zod'
-import { WalletSchema, WalletUidSchema } from './Wallet'
-import { AssetUidSchema, AssetSchema } from './Asset'
+import { z } from 'zod'
+import { AssetSchema, AssetUidSchema } from './Asset'
 import { TotalSchema } from './Total'
+import { WalletSchema, WalletUidSchema } from './Wallet'
 
 export const TallySchema = z.object({
   wallet: WalletSchema,
@@ -32,5 +31,5 @@ export function validateTallys(tallys: Tally[]): Tally[] {
 }
 
 export function getTallyUid(tallyUid: TallyUid) {
-  return toUidFromSchema(tallyUid, TallyUidSchema)
+  return TallyUidSchema.parse(tallyUid)
 }

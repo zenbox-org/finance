@@ -1,8 +1,8 @@
-import { Transfer } from '../Transfer'
-import { TransferTally, TransferTallyKey } from '../TallyMap'
-import { parseWalletUid } from '../Wallet'
-import { parseAssetUid } from '../Asset'
 import { addTallyBigNumber } from '../../../generic/models/Tally/addTally'
+import { parseAssetUid } from '../Asset'
+import { TransferTally, TransferTallyKey } from '../TallyMap'
+import { Transfer } from '../Transfer'
+import { parseWalletUid } from '../Wallet'
 
 export function getTallies(transfers: Transfer[]) {
   return transfers.reduce<TransferTally[]>(function (tallies, transfer) {
