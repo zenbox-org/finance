@@ -1,9 +1,9 @@
 import { getDuplicatesRefinement } from 'libs/utils/zod'
-import { isEqual } from 'lodash-es'
 import { z } from 'zod'
 import { IdSchema } from '../../generic/models/Id'
 import { NameSchema } from '../../generic/models/Name'
 import { NotesSchema } from '../../generic/models/Notes'
+import { isEqualByDC } from '../../utils/lodash'
 import { TickerSchema } from './Ticker'
 
 /**
@@ -51,6 +51,8 @@ export function parseAssetUid(assetUid: AssetUid): AssetUid {
   return AssetUidSchema.parse(assetUid)
 }
 
+export const isEqualAsset = isEqualByDC(parseAssetUid)
+
 export interface WithAsset { asset: Asset }
 
-export const byAsset = (asset: Asset) => (object: WithAsset) => isEqual(object.asset, asset)
+export const byAsset = (asset: Asset) => (object: WithAsset) => isEqualAsset(asset)(object.asset)
