@@ -3,3 +3,5 @@ export interface BalanceGen<Wallet, Asset, Amount> {
   asset: Asset
   amount: Amount
 }
+
+export type BalanceGenTuple<Wallet, Asset, Amount> = [Wallet, Asset, Amount]
