@@ -20,3 +20,7 @@ export function getAmountUid(amount: Amount) {
 export function parseAmount(amount: BigNumber.Value) {
   return AmountSchema.parse(new BigNumber(amount))
 }
+
+export interface WithAmount { amount: Amount }
+
+export interface WithAmountGen<Amount> { amount: Amount }

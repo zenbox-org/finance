@@ -1,6 +1,6 @@
 import { sumBigNumbers } from 'libs/utils/bignumber'
-import { Amount } from '../Amount'
+import { WithAmount } from '../Amount'
 
-export function sumAmounts(objects: { amount: Amount }[]) {
+export function sumAmounts(objects: WithAmount[]) {
   return sumBigNumbers(objects.map(o => o.amount))
 }
