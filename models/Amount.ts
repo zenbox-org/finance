@@ -1,4 +1,4 @@
-import { BigNumber } from 'libs/utils/bignumber'
+import { BigNumber } from 'libs/utils/BigNumber.utils'
 import { refinePositiveBigNumber, refinePositiveBigNumberParams, refinePositiveOrZeroBigNumber, refinePositiveOrZeroBigNumberParams } from 'libs/utils/zod.bignumber'
 import { z } from 'zod'
 

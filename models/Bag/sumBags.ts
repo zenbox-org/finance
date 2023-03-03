@@ -1,4 +1,4 @@
-import { sumBigNumbers } from 'libs/utils/bignumber'
+import { sumBigNumbers } from 'libs/utils/BigNumber.utils'
 import { ensure } from 'libs/utils/ensure'
 import { isEqual } from 'lodash-es'
 import { TimeValueMap } from '../../../generic/models/TimeValueMap'
