@@ -1,7 +1,7 @@
-import { Arithmetic } from '../../../utils/arithmetic'
+import { BasicArithmetic } from '../../../utils/arithmetic'
 import { WithAmountGen } from '../Amount'
 
-export const getGenMutilatorsWithAmount = <Amount>(arithmetic: Arithmetic<Amount>) => {
+export const getGenMutilatorsWithAmount = <Amount>(arithmetic: BasicArithmetic<Amount>) => {
   type WA = WithAmountGen<Amount>
   type A = Amount
   const { add, sub, mul, div } = arithmetic
