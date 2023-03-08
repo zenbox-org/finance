@@ -72,6 +72,12 @@ export const USD = addAsset(withIdFromName({
   // url: 'https://en.wikipedia.org/wiki/United_States_dollar',
 }))
 
+export const EUR = addAsset(withIdFromName({
+  name: 'Euro',
+  ticker: 'EUR',
+  // url: 'https://en.wikipedia.org/wiki/United_States_dollar',
+}))
+
 export const THB = addAsset(withIdFromName({
   name: 'Thai Baht',
   ticker: 'THB',

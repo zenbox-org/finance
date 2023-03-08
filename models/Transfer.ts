@@ -49,5 +49,5 @@ export function getTransferUid(transferUid: TransferUid) {
 }
 
 export function sumTransfers(transfers: Transfer[], asset: Asset, timeValueMap: TimeValueMap) {
-  return sumBags(transfers, asset, timeValueMap)
+  return sumBags(timeValueMap)(asset)(transfers)
 }
