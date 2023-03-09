@@ -1,4 +1,4 @@
-import { BigNumber } from 'libs/utils/BigNumber.utils'
+import { BigNumber } from 'libs/utils/BigNumber/utils'
 import { testSamples } from 'libs/utils/jest/testSamples'
 import { AmountSchema } from './Amount'
 

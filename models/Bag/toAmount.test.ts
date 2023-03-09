@@ -1,6 +1,6 @@
 import { test } from '@jest/globals'
 import { TimeValueMap } from 'libs/generic/models/TimeValueMap'
-import { BigNumber } from 'libs/utils/BigNumber.utils'
+import { BigNumber } from 'libs/utils/BigNumber/utils'
 import { expect } from 'libs/utils/chai'
 import { hour } from 'libs/utils/duration'
 import { ETH, USDT } from '../../data/allAssets'
