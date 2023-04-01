@@ -15,6 +15,10 @@ export const BlockchainEthereumMainnet = addNetwork({
   id: 'BlockchainEthereumMainnet',
 })
 
+export const BlockchainBNBChainMainnet = addNetwork({
+  id: 'BlockchainBNBChainMainnet',
+})
+
 addNetwork({
   id: 'Qiwi',
 })

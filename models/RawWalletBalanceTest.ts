@@ -1,9 +1,9 @@
 import { getDuplicatesRefinement } from 'libs/utils/zod'
 import { z } from 'zod'
+import { WalletBalanceTestSchema } from '../../../projects/Coliquidity/projects/TaxReport/models/WalletBalanceTest'
 import { AssetSchema } from './Asset'
 import { NetworkSchema } from './Network'
 import { WalletSchema } from './Wallet'
-import { WalletBalanceTestSchema } from './WalletBalanceTest'
 
 export const RawWalletBalanceTestSchema = WalletBalanceTestSchema.omit({
   walletUid: true,

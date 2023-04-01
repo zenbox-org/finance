@@ -59,11 +59,23 @@ export const SHLD = addAsset(withIdFromName({
   // url: 'https://coinmarketcap.com/currencies/shield-finance/',
 }))
 
+export const BULLOld = addAsset(withIdFromName({
+  name: 'Bull Token (old)',
+  ticker: 'OLDBULL',
+  // maxSupply: num(9691630000000),
+  // url: 'https://etherscan.io/address/0x1Bb022aB668085C6417B7d7007b0fbD53bACc383',
+}))
+
 export const BULL = addAsset(withIdFromName({
   name: 'Bull Token',
   ticker: 'BULL',
   // maxSupply: num(9691630000000),
   // url: 'https://etherscan.io/address/0x1Bb022aB668085C6417B7d7007b0fbD53bACc383',
+}))
+
+export const UniswapV2_BULL_USDT = addAsset(withIdFromName({
+  name: 'Uniswap V2: BULL-USDT LP token',
+  ticker: 'UNI-V2',
 }))
 
 export const USD = addAsset(withIdFromName({
@@ -96,13 +108,19 @@ export const COLI = addAsset(withIdFromName({
   // url: `https://${ColiquidityCom}`,
 }))
 
-export const COLI_WETH_LP = addAsset(withIdFromName({
-  name: 'COLI-WETH Uniswap V2 LP tokens',
-  ticker: 'UNIV2',
+export const COLI_ChainPortBridge_BNBChainMainnet = addAsset(withIdFromName({
+  name: 'Coliquidity Token Bridged to BNBChain Mainnet via ChainPort.io',
+  ticker: 'COLI',
+  // url: `https://${ColiquidityCom}`,
 }))
 
-export const COLI_BUSD_LP = addAsset(withIdFromName({
-  name: 'COLI-BUSD PancakeSwap LP tokens',
+export const UniswapV2_COLI_WETH = addAsset(withIdFromName({
+  name: 'Uniswap V2: COLI-WETH LP token',
+  ticker: 'UNI-V2',
+}))
+
+export const PancakeSwap_COLI_BUSD = addAsset(withIdFromName({
+  name: 'PancakeSwap: COLI-BUSD LP token',
   ticker: 'CakeLP',
 }))
 
@@ -144,6 +162,11 @@ export const WIS = addAsset(withIdFromName({
 export const AKS = addAsset(withIdFromName({
   name: 'akSwap.io',
   ticker: 'AKS', // not a real symbol
+}))
+
+export const YTS = addAsset(withIdFromName({
+  name: 'yetiswap.io',
+  ticker: 'YTS',
 }))
 
 export const SOL = addAsset(withIdFromName({

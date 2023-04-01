@@ -1,10 +1,10 @@
 import { ensure } from 'libs/utils/ensure'
 import { z } from 'zod'
 
-export const TickerRegex = /^[a-zA-Z0-9]+$/
+export const TickerRegex = /^[a-zA-Z0-9-]+$/
 
 /**
- * Don't rename to Symbol - it's an existing class in JavaScript
+ * Don't rename to Symbol - it's a native class in JavaScript
  */
 export const TickerSchema = z.string().min(1).regex(TickerRegex, 'Must match a CoinMarketCap ticker (examples: BTC, ETH, 1INCH)')
 
