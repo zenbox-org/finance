@@ -10,7 +10,7 @@ export const BagSchema = z.object({
   asset: AssetSchema,
 }).describe('Bag')
 
-export const BagsSchema = getArraySchema(BagSchema, parseBagUid)
+export const BagsFullSchema = getArraySchema(BagSchema, parseBagUid)
 
 export const BagsByAssetSchema = getArraySchema(BagSchema, b => parseAssetUid(b.asset))
 
@@ -28,7 +28,7 @@ export function parseBag(bag: Bag): Bag {
 }
 
 export function parseBags(bags: Bag[]): Bag[] {
-  return BagsSchema.parse(bags)
+  return BagsFullSchema.parse(bags)
 }
 
 export function parseBagUid(bagUid: BagUid): BagUid {
